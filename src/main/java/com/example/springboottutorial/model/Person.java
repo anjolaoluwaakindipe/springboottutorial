@@ -2,6 +2,8 @@ package com.example.springboottutorial.model;
 
 import java.util.UUID;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 /**
  * Person
  */
@@ -11,7 +13,7 @@ public class Person {
 
     private final String name;
 
-    public Person(UUID id, String name) {
+    public Person(@JsonProperty("id") UUID id, @JsonProperty("name") String name) {
         this.id = id;
         this.name = name;
     }
