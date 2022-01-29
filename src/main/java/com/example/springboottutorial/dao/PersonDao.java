@@ -9,7 +9,7 @@ import com.example.springboottutorial.model.Person;
 public interface PersonDao {
     int addPerson(UUID id, Person name);
 
-    default int insertPerson(Person person){
+    default int addPerson(Person person){
         UUID id = UUID.randomUUID();
 
         return addPerson(id, person);
